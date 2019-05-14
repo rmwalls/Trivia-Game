@@ -1,6 +1,7 @@
 // Pick a theme  DONE
 // Initially, page has a Start button DONE
 // upon clicking start, 
+// Start button goes away
 //count down timer shown DONE
 //(restarts with each question)
     // need questions each with 1 correct answer & 3 wrong answers - use arrays??
@@ -8,7 +9,7 @@
 // show first question, with 4 answers to choose from 
     // only allow one selection
     // as soon as answer is clicked, 
-        // stop time
+        // stop time  
         // show right or wrong
         // show correct answer with image
         // store count of right, wrong answers, get # of unanswered questions
@@ -16,7 +17,7 @@
             //reset timer and redisplay
             //display new question with answers
     // if time expires before question is answered
-        // stop timer
+        // stop timer DONE
         // display "Time's up" message
         // display correct answer
         // increase wrong answer count
