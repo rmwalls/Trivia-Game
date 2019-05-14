@@ -3,17 +3,20 @@ var correct = 0;
 var wrong = 0;
 var unanswered = 0;
 var intervalId; //holds the intervalID
-var number = 30; //Set counter to countdown from 30.
+var number = 34; //Set counter to countdown from 34.
 
-$("#button-start").on("click", timer());
+// $("button-start").on("click", timer());
+//    console.log("after button click");
+//    $(document).ready(function());
+    $("#button-start").click(timer());
+    $("#button-start").hide();
 
-console.log("after button click");
-
+    
 function timer() {
     clearInterval(intervalId);  
     intervalId = setInterval(decrement, 1000);
     decrement();
-    }
+}
 
 // decrement function (to countDOWN)
 function decrement() {
@@ -23,9 +26,10 @@ function decrement() {
     if (number === 0) { //Once number hits zero, run stop 
         stop();
     
-    console.log("Time's Up!");
-    }}
+        console.log("Time's Up!");
+    }
+}
 
     function stop() {
         clearInterval(intervalId);
-  }
+    }

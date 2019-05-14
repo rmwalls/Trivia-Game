@@ -2,3 +2,24 @@ body {
     background: url(../images/background.jpg);
     background-size: 100%;
 }
+
+.header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px; 
+    text-shadow: 2px 2px gray;  
+    padding: 4px;
+    margin: 10px 0 10px 0;
+    text-align: center;
+ }
+
+ #image-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-emphasis: center;
+  }
+
+  .timer {
+      text-align: center;
+  }
