@@ -1,8 +1,10 @@
-// Pick a theme
-// Initial page has a Start button
-// upon clicking start, count down timer shown (restarts with each question)
+// Pick a theme  DONE
+// Initially, page has a Start button DONE
+// upon clicking start, 
+//count down timer shown DONE
+//(restarts with each question)
     // need questions each with 1 correct answer & 3 wrong answers - use arrays??
-    // need image for each correct answer
+    // need image for each correct answer DONE
 // show first question, with 4 answers to choose from 
     // only allow one selection
     // as soon as answer is clicked, 
@@ -46,3 +48,9 @@
     //per question
     //display result
 // When Start is pressed, the page content is just replaced, doesn't go to a new page
+
+// Each question needs to have:
+    // 3 wrong answers
+    // 1 right answer
+    // image 
+    
