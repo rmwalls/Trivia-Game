@@ -3,6 +3,7 @@
 // upon clicking start, 
 // Start button goes away
 //count down timer shown DONE
+// Show question number (1 of 8, etc,)
 //(restarts with each question)
     // need questions each with 1 correct answer & 3 wrong answers - use arrays??
     // need image for each correct answer DONE
