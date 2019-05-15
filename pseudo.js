@@ -1,7 +1,7 @@
 // Pick a theme  DONE
 // Initially, page has a Start button DONE
 // upon clicking start, 
-// Start button goes away
+// Start button goes away DONE
 //count down timer shown DONE
 // Show question number (1 of 8, etc,)
 //(restarts with each question)
