@@ -4,7 +4,9 @@ var wrong = 0;
 var unanswered = 0;
 var intervalId; //holds the intervalID
 var number = 34; //Set counter to countdown from 34.
-
+var qNumb = document.querySelector('.qNumb');
+console.log(qNumb);
+qNumb.innerText += 
 
 
 $(document).ready(function(){
@@ -17,13 +19,14 @@ $(document).ready(function(){
         { label: "A. ", result: "wrong", a1: "Al Gore"},
         { label: "B. ", result: "right", a2: "Marc Andreesen"},
         { label: "C. ", result: "wrong", a3: "Steve Case"},
-        { label: "D. ", result: "right", a4: "Elon Musk"}
+        { label: "D. ", result: "wrong", a4: "Elon Musk"}
     ],
-    test(){
-    console.log(Q1);
-   } //end test
+    working(){
+    const questionNum = Q1.qNumber;
+    console.log(Q1, questionNum);
+   } //end check
 } // end Q1
-Q1.test();
+Q1.working();
 
     // When the button is clicked, the timer starts. Eventually the 1st quest will also display
     $("#button-start").click(timer); 
