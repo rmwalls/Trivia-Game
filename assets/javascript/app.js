@@ -1,18 +1,13 @@
-// Some variables
+$(document).ready(function() {
 var correct = 0;
 var wrong = 0;
 var unanswered = 0;
 var intervalId; //holds the intervalID
+var userAnswer;
 var number = 34; //Set counter to countdown from 34.
-var qNumb = document.querySelector('.qNumb');
-console.log(qNumb);
-qNumb.innerText += 
 
-
-$(document).ready(function(){
-
- // object for 1st question
- let Q1 = {
+    // object for 1st question
+    let Q1 = {
     qNumber: 1, 
     question: "The founder of Netscape was:",
     answers: [
@@ -20,20 +15,21 @@ $(document).ready(function(){
         { label: "B. ", result: "right", a2: "Marc Andreesen"},
         { label: "C. ", result: "wrong", a3: "Steve Case"},
         { label: "D. ", result: "wrong", a4: "Elon Musk"}
-    ],
-    working(){
-    const questionNum = Q1.qNumber;
-    console.log(Q1, questionNum);
-   } //end check
-} // end Q1
-Q1.working();
+        ],
+        working(){
+        const questionNum = Q1.qNumber;
+        console.log(Q1, "number: " + questionNum);
+        $(".qNumb").html("Question # " + questionNum);
+        } //end working
+    } // end Q1
+    Q1.working();
 
     // When the button is clicked, the timer starts. Eventually the 1st quest will also display
     $("#button-start").click(timer); 
    
     // start timer, fade the button away, eventually display 1st question    
     function timer() {
-        $("#button-start").fadeOut(800);
+        $("#button-start").fadeOut(500);
         clearInterval(intervalId);  
         intervalId = setInterval(decrement, 1000);
         decrement();
@@ -49,6 +45,12 @@ Q1.working();
                 console.log("Time's Up!");
             } //end if
     } //end decrement
+
+    
+    //$(".qNumb").html("Question # " + qNumber);
+    //var qNumb = document.querySelector(".qNumb");
+    //console.log("this is qNumber " + qNumber);
+    
 
     function stop() {
         clearInterval(intervalId);

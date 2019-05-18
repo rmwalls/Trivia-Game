@@ -3,14 +3,15 @@
 // upon clicking start, 
 // Start button goes away DONE
 //count down timer shown DONE
-// Show question number (1 of 8, etc,)
+// Show question number (1 of 10, etc,)
 //(restarts with each question)
     // need questions each with 1 correct answer & 3 wrong answers - use arrays??
     // need image for each correct answer DONE
 // show first question, with 4 answers to choose from 
     // only allow one selection
     // as soon as answer is clicked, 
-        // stop time  
+        // stop timer  
+        // determine if userAnswer is correct
         // show right or wrong
         // show correct answer with image
         // store count of right, wrong answers, get # of unanswered questions
@@ -48,11 +49,12 @@
     // determineResult
 // Timers needed
     //per question
-    //display result
+    //while displaying result
 // When Start is pressed, the page content is just replaced, doesn't go to a new page
 
 // Each question needs to have:
     // 3 wrong answers
     // 1 right answer
     // image 
+    // sounds
     
