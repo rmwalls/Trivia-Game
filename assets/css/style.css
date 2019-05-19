@@ -23,3 +23,7 @@ body {
   .timer {
       text-align: center;
   }
+
+  #answerChoices {
+      font-size: 30px;
+  }
