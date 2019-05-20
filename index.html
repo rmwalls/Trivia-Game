@@ -45,13 +45,26 @@
         <div class = "row tex-center"> <!-- row 4 -->
             <div class = "col-md-12"> <!-- col 1 of 1-->
                 <div id="questionText"></div>
-                <div id="answerChoices"><button type="input" class="btn btn btn-lg" id="button0" data-value=0></button>
-                <div id="answerChoices"><button type="button" class="btn btn btn-lg" id="button1" data-value=0></button>
-                <div id="answerChoices"><button type="button" class="btn btn btn-lg" id="button2" data-value=0></button>
-                <div id="answerChoices"><button type="button" class="btn btn btn-lg" id="button3" data-value=0></button>                    
+                <div id="answerChoices"><button class="btn btn btn-lg" id="button0" data-value=0></button>
+                <div id="answerChoices"><button class="btn btn btn-lg" id="button1" data-value=1></button>
+                <div id="answerChoices"><button class="btn btn btn-lg" id="button2" data-value=2></button>
+                <div id="answerChoices"><button class="btn btn btn-lg" id="button3" data-value=3></button>                    
                 </div>
             </div> <!--end col 1 of 1-->
         </div> <!--end row 4-->
+
+        <div class="yourResult">
+            <div id="resultMessage"></div>
+            <div id="image"></div>
+            <div id="score"></div>
+      
+        </div> <!--end yourResult-->
+
+        <div class="gameOver">
+            <button type="reset" class="restartMe" id="reset" value=reset>Restart Game</button>               
+        </div>
+
+
 
     </div>  <!-- end container div -->  
 
