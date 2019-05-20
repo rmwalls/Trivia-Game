@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=980, initial-scale=1.0">
-    <!-- Link to the jQuery Library -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <!-- Link to Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <!-- javascript -->
-    <script type="text/javascript"></script>
-    <script src="assets/javascript/app.js"></script>
-    <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>WebDev TriviaPalooza</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=980, initial-scale=1.0">
+        <!-- Link to the jQuery Library -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <!-- Link to Bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <title>WebDev TriviaPalooza</title>
+    </head>
 <body>
-    <div class="container text-center" style="background-color: lightgray" width="60%">
+    <div class="container text-center" style="background-color: lightgray">
         <div class = "row"> <!--row 1-->
             <div class = "col-md-12"> <!-- row 1's column -->
                 <div class="header" style="background-color:lightgray">
-                    <h1 class="heading">WebDev TriviaPalooza!</h1>
+                    <h1 id="heading">WebDev TriviaPalooza!</h1>
                 </div> <!-- close header -->  
             </div> <!-- close col -->
         </div> <!-- close row 1-->
 
         <div class = "row text-center"> <!--row 2-->
-            <div class = "col-md-12 text-center"> <!-- row 2's column--> 
+            <div class = "col-md-12 text-center"> <!-- row 2's column--> <!-- Start button --> 
                 <div class="image-button"><input type="image" id="button-start" alt="Start Button" src="assets/images/www.jpg">
-                </div> <!-- "Start" button --> 
+                </div> 
             </div> <!--end row 2 column-->
         </div> <!-- end row 2 -->
 
@@ -42,29 +40,27 @@
                 <h2 class="qNumb"></h2>
             </div> <!--end column-->
         </div> <!-- end row 3-->
+
         <div class = "row tex-center"> <!-- row 4 -->
-            <div class = "col-md-12"> <!-- col 1 of 1-->
+            <div class = "col-md-12" id="showQA"> <!-- col 1 of 1-->
                 <div id="questionText"></div>
-                <div id="answerChoices"><button class="btn btn btn-lg" id="button0" data-value=0></button>
-                <div id="answerChoices"><button class="btn btn btn-lg" id="button1" data-value=1></button>
-                <div id="answerChoices"><button class="btn btn btn-lg" id="button2" data-value=2></button>
-                <div id="answerChoices"><button class="btn btn btn-lg" id="button3" data-value=3></button>                    
-                </div>
+                <div id="answerChoices"><button class="btn btn btn-lg" id="button0" data-value=0></button></div>
+                <div id="answerChoices"><button class="btn btn btn-lg" id="button1" data-value=1></button></div>
+                <div id="answerChoices"><button class="btn btn btn-lg" id="button2" data-value=2></button></div>
+                <div id="answerChoices"><button class="btn btn btn-lg" id="button3" data-value=3></button></div>
             </div> <!--end col 1 of 1-->
         </div> <!--end row 4-->
 
-        <div class="yourResult">
+        <div>
             <div id="resultMessage"></div>
             <div id="image"></div>
-            <div id="score"></div>
-      
-        </div> <!--end yourResult-->
-
-        <div class="gameOver"></div>
+	    <div class="gameOver"></div>
+        </div> <!--end div-->
 
 
 
     </div>  <!-- end container div -->  
-
+  <!-- javascript -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
