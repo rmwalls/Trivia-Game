@@ -4,14 +4,13 @@ body {
 }
 
 .container {
-	max-width: 600px
+	max-width: 880px
 }
 
 .header {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 40px;
 	color: white; 
-    //text-shadow: 2px 2px gray;  
     padding: 8px;
     margin: 20px 0 10px 0;
     text-align: center;
@@ -39,4 +38,10 @@ body {
 .gameOver {
 	font-size: 38px;
 	color: DarkGreen;
+}
+
+img {
+    width: 500px;
+    height: auto; 
+    margin-bottom: 10px;
 }

@@ -1,49 +1,50 @@
 // 5/19/19 TODO still
 //make restart button work
-// make timer restart correctly
-//clear out previous response and answer info
+// make timer restart correctly DONE
+//clear out previous response and answer info DONE
 // work on css of text and image size
-//get image for question 5
+//get image for question 5 DONE
+// Show question number (1 of 10, etc,)
 
 //BONUS
 // get sounds working
-//fix width of container
+//fix width of container DONE
 
 
 
 // Pick a theme  DONE
 // Initially, page has a Start button DONE
-// upon clicking start, 
+// upon clicking start, DONE
 // Start button goes away DONE
 //count down timer shown DONE
-// Show question number (1 of 10, etc,)
-//(restarts with each question)
-    // need questions each with 1 correct answer & 3 wrong answers - use arrays??
+
+//(restarts with each question) DONE
+    // need questions each with 1 correct answer & 3 wrong answers DONE
     // need image for each correct answer DONE
-// show first question, with 4 answers to choose from 
-    // only allow one selection
+// show first question, with 4 answers to choose from DONE
+    // only allow one selection on click controls this DONE
     // as soon as answer is clicked, 
-        // stop timer  
-        // determine if userAnswer is correct
-        // show right or wrong
-        // show correct answer with image
-        // store count of right, wrong answers, get # of unanswered questions
-        // after a few seconds
-            //reset timer and redisplay
-            //display new question with answers
-    // if time expires before question is answered
+        // stop timer  DONE
+        // determine if userAnswer is correct DONE
+        // show right or wrong DONE
+        // show correct answer with image DONE
+        // store count of right, wrong answers, unanswered questions DONE
+        // after a few seconds DONE
+            //reset timer and redisplay DONE
+            //display new question with answers DONE
+    // if time expires before question is answered DONE
         // stop timer DONE
-        // display "Time's up" message
-        // display correct answer
-        // increase wrong answer count
-        // after a few seconds
-            //reset timer and redisplay
-            // display new questions with answers
-    //After final question
-        //stop timer
-        //display a message
-        //display # of right, wrong and unanswered questions
-        //provide Play Again button
+        // display "Time's up" message DONE
+        // display correct answer DONE
+        // increase answered count DONE
+        // after a few seconds DONE
+            //reset timer and redisplay DONE
+            // display new question with answers DONE
+    //After final question DONE
+        //stop timer DONE
+        //display a message DONE
+        //display # of right, wrong and unanswered questions DONE
+        //provide Play Again button DONE
             //reset parameters
             //restart game
 
