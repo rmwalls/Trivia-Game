@@ -1,3 +1,16 @@
+// 5/19/19 TODO still
+//make restart button work
+// make timer restart correctly
+//clear out previous response and answer info
+// work on css of text and image size
+//get image for question 5
+
+//BONUS
+// get sounds working
+//fix width of container
+
+
+
 // Pick a theme  DONE
 // Initially, page has a Start button DONE
 // upon clicking start, 

@@ -34,6 +34,11 @@ function stop() {
     clearInterval(intervalId);
 } //end stop
 
+function restartTimer() {
+    clearInterval(intervalId);
+    intervalId = setInterval(decrement, 1000);
+}
+
 // object for 1st question
 let q1 = {
     qNumber: 1, 
@@ -98,7 +103,7 @@ let q6 = {
     question: "JAVA stands for:",
     answer: "A. Nothing, it's a reference to coffee",
     choices: [" A. Nothing, it's a reference to coffee ", " B. Just-in-time All-Code Verification Application ", " C. James’s Application Virtual Applets ", " D. Justified Automatic Version Anywhere "],
-    correctAnswer: 1,
+    correctAnswer: 0,
     image: "assets/images/java.jpg"
 }
 
@@ -151,7 +156,8 @@ function displayQandA() {
             //Which answer was clicked
             var userButtonValue = ($(this).attr("data-value"));
             console.log("user button " + userButtonValue);
-            //Check for win/lose
+            
+            //Check for right/wrong
             if (userButtonValue == QuestionsArr[indexQuestion].correctAnswer) {
                 $("#resultMessage").html("<h2><p>Correct!</p></h2><img src='" + QuestionsArr[indexQuestion].image + "' height = 200 width = 350 alt='correct'>");
                 gameStats.right ++;//increment score
@@ -161,19 +167,19 @@ function displayQandA() {
                 
                 //reset timer
                 stop();
-                //timer.reset();						
+                restartTimer();						
 
             } else {
             
-                $("#resultMessage").html("<h2><p>Wrong! <br> The correct answer was: <br>" + QuestionsArr[indexQuestion].answer + "</p></h2>");
+                $("#resultMessage").html("<h2><p>Oops! Wrong! <br> The correct answer was: <br>" + QuestionsArr[indexQuestion].answer + "</p></h2>");
                 gameStats.wrong ++;
                 console.log("wrong answer " + gameStats.wrong);
-                //audio = new Audio("assets/Buzzer.mp3");
+                //audio = new Audio("assets/sounds/Buzzer.mp3");
                 //audio.play();
 
                 //reset timer
                 stop();
-                //timer.reset();	
+                restartTimer();	
             } //end second if
 
             $("#yourResult").show(); //show the correct image div
@@ -191,19 +197,20 @@ function displayQandA() {
     
         if (indexQuestion < QuestionsArr.length) {
             displayQandA();
-            $("#quizMessage").hide();
+            $(".yourResult").hide();
             $("#timerDisplay").show();
             $(".btn").show();
             stop();
             //timer.reset();
-            //timer.start();
+            restartTimer();
         } else	{ //Display scores when game ends
-            $("#yourResult").hide();
+            $(".yourResult").hide();
             $("#question").hide();
             $("#score").html("<div>"+ "Game Over! <br> Your Score" +"</div>"+
             "<div>"+ "Correct Answers: " + gameStats.right +"</div>" + 
             "<div>"+ "Wrong Answers: " + gameStats.wrong +"</div>" +
             "<div>"+ "Unanswered Questions: " + gameStats.unanswered +"</div>");
+            $(".gameOver").html('<button type="reset" class="restartMe" id="reset" value=reset>Restart Game</button>');
         } //end if
     } //end nextQuestion
     
