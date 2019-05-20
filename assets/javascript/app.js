@@ -146,20 +146,17 @@ function displayQandA() {
 	} //end QanA
 
     //User input check answer
-    $(".btn").click(function() 
-    {
-        if (indexQuestion < QuestionsArr.length)
-        {
+    $(".btn").click(function() {
+        if (indexQuestion < QuestionsArr.length) {
             //Which answer was clicked
             var userButtonValue = ($(this).attr("data-value"));
             console.log("user button " + userButtonValue);
             //Check for win/lose
-            if (userButtonValue == QuestionsArr[indexQuestion].correctAnswer)
-            {
+            if (userButtonValue == QuestionsArr[indexQuestion].correctAnswer) {
                 $("#resultMessage").html("<h2><p>Correct!</p></h2><img src='" + QuestionsArr[indexQuestion].image + "' height = 200 width = 350 alt='correct'>");
                 gameStats.right ++;//increment score
                 console.log("correct answer " + gameStats.right);
-                //audio = new Audio("assets/ding.mp3");
+                //audio = new Audio("assets/sounds/ding.mp3");
                 //audio.play();
                 
                 //reset timer
@@ -184,10 +181,31 @@ function displayQandA() {
             $("#gameOver").hide();
             $(".btn").hide();
 
-            //setTimeout(nextQuestion, 3000);
+            setTimeout(nextQuestion, 3000);
             
         } //end first if
     }); 
+
+    function nextQuestion() {
+        indexQuestion++;
+    
+        if (indexQuestion < QuestionsArr.length) {
+            displayQandA();
+            $("#quizMessage").hide();
+            $("#timerDisplay").show();
+            $(".btn").show();
+            stop();
+            //timer.reset();
+            //timer.start();
+        } else	{ //Display scores when game ends
+            $("#yourResult").hide();
+            $("#question").hide();
+            $("#score").html("<div>"+ "Game Over! <br> Your Score" +"</div>"+
+            "<div>"+ "Correct Answers: " + gameStats.right +"</div>" + 
+            "<div>"+ "Wrong Answers: " + gameStats.wrong +"</div>" +
+            "<div>"+ "Unanswered Questions: " + gameStats.unanswered +"</div>");
+        } //end if
+    } //end nextQuestion
     
 
 }); //end document.ready
