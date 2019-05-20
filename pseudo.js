@@ -2,7 +2,7 @@
 //make restart button work
 // make timer restart correctly DONE
 //clear out previous response and answer info DONE
-// work on css of text and image size
+// work on css of text and image size DONE
 //get image for question 5 DONE
 // Show question number (1 of 10, etc,)
 
