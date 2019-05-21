@@ -136,7 +136,7 @@ $(document).ready(function() {
     } //end of last object
 
     //Array of questions to cycle through
-    let QuestionsArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
+    let QuestionsArr = [q1, q2/*, q3, q4, q5, q6, q7, q8, q9*/];
     var indexQuestion = 0;
 
     function displayQandA() {  //this displays the questions with answer choices
@@ -144,6 +144,7 @@ $(document).ready(function() {
         $("#showQA").show();
         $("#questionText").show(); // show question
         $("#answerChoices").show(); // show answers
+        $(".btn").show();
         $("#questionText").html("<h3>" + QuestionsArr[indexQuestion].question + "</h3>");
         $("#button0").text(QuestionsArr[indexQuestion].choices[0]);
         $("#button1").text(QuestionsArr[indexQuestion].choices[1]);
@@ -190,7 +191,7 @@ $(document).ready(function() {
 
     function nextQuestion() { //determine if there are more questions and move to next one
         indexQuestion++;
-    
+    console.log("indexQustion is " + indexQuestion);
         if (indexQuestion < QuestionsArr.length) {
             displayQandA();
 	        $("#questionText").show(); //display the next question
@@ -221,10 +222,10 @@ $(document).ready(function() {
         indexQuestion=0;
         $("#resultMessage").hide(); // hide resultMessage
         $(".gameOver").hide(); // hide gameOver info
+        //$("#answerChoices").hide(); // restart, hide last QandA
         $("#questionText").hide(); // restart, hide last QandA
-        $("#answerChoices").hide(); // restart, hide last QandA
         stop();
-        clearInterval(intervalId);
+        //clearInterval(intervalId);
         number=11;
         timer();
     } // end restartGame
