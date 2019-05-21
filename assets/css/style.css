@@ -14,7 +14,8 @@ body {
     padding: 8px;
     margin: 20px 0 10px 0;
     text-align: center;
-	font-weight: bold;
+    font-weight: bold;
+    border-radius: 50%;
     background-color: gray; /* For browsers that do not support gradients */
     background-image: radial-gradient(violet, purple, blue); /* Standard syntax (must be last) */
  }

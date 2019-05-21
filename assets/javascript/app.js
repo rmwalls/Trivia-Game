@@ -14,6 +14,7 @@ $(document).ready(function() {
 
     // start timer, hide button, display 1st question    
     function timer() {
+        console.log("I'm in the timer function");
         $("#button-start").hide();
         intervalId = setInterval(decrement, 1000);
         displayQandA();
@@ -28,6 +29,7 @@ $(document).ready(function() {
                 $("#resultMessage").show(); // allow the time's up message to show up
                 $("#resultMessage").html("<h2><p>Oops! Time's Up! <br> The correct answer was: <br>" + QuestionsArr[indexQuestion].answer + "</p></h2>");
                 gameStats.unanswered++; //increase the unanswered score
+                console.log("unanswered count is " + gameStats.unanswered);
                 setTimeout(nextQuestion, 3000); //in 3 secs go to nextQuestion
             } //end if
     } //end decrement
@@ -139,7 +141,9 @@ $(document).ready(function() {
 
     function displayQandA() {  //this displays the questions with answer choices
         console.log("I got to function displayQanA");
-            $("#showQA").show();
+        $("#showQA").show();
+        $("#questionText").show(); // show question
+        $("#answerChoices").show(); // show answers
         $("#questionText").html("<h3>" + QuestionsArr[indexQuestion].question + "</h3>");
         $("#button0").text(QuestionsArr[indexQuestion].choices[0]);
         $("#button1").text(QuestionsArr[indexQuestion].choices[1]);
@@ -197,15 +201,16 @@ $(document).ready(function() {
             restartTimer();
         } else	{ //Display scores when game ends
 	        console.log("Got to game ends");
+            
+            $(".gameOver").show(); //allow game over info to show
             $("#showQA").hide(); //game over, hide last QandA
-	        $(".gameOver").show(); //allow game over info to show
             $(".gameOver").html("<div>"+ "Game Over! <br> Your Score" +"</div>"+
             "<div>"+ "Correct Answers: " + gameStats.right +"</div>" + 
             "<div>"+ "Wrong Answers: " + gameStats.wrong +"</div>" +
             "<div>"+ "Unanswered Questions: " + gameStats.unanswered +"</div>");
-            //display a restart button without erasing scores
+            //display a restart button without erasing scores until it's clicked
             $(".gameOver").append('<button type="button" class="restartMe" id="reset">Restart Game</button>');
-            $("#restartMe").click(restartGame); // when button is clicked, send to restart function
+            $(".restartMe").on("click",restartGame); // when button is clicked, send to restart function
         } //end if
     } //end nextQuestion
     
@@ -214,6 +219,13 @@ $(document).ready(function() {
         gameStats.wrong=0;
         gameStats.unanswered=0;
         indexQuestion=0;
+        $("#resultMessage").hide(); // hide resultMessage
+        $(".gameOver").hide(); // hide gameOver info
+        $("#questionText").hide(); // restart, hide last QandA
+        $("#answerChoices").hide(); // restart, hide last QandA
+        stop();
+        clearInterval(intervalId);
+        number=11;
         timer();
     } // end restartGame
 
