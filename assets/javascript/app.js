@@ -1,3 +1,4 @@
+// Homework 5/21/2019 DONE
 $(document).ready(function() {
     var gameStats = {
         right: 0,
