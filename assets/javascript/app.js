@@ -136,7 +136,7 @@ $(document).ready(function() {
     } //end of last object
 
     //Array of questions to cycle through
-    let QuestionsArr = [q1, q2/*, q3, q4, q5, q6, q7, q8, q9*/];
+    let QuestionsArr = [q1, q2, q3, q4, q5, q6, q7, q8, q9];
     var indexQuestion = 0;
 
     function displayQandA() {  //this displays the questions with answer choices
